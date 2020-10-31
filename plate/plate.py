@@ -115,7 +115,7 @@ class Plate:
 
         try:
             if count is not None:
-                phrase = self._format_plurals(phrase, locale, count)
+                phrase = self._format_plurals(phrase, locale, count, **kwargs)
 
             return phrase.format(**kwargs)
         except KeyError as e:
@@ -197,11 +197,11 @@ class Plate:
                         )
                     )
 
-    def _format_plurals(self, phrase: str, locale: str, count: int) -> str:
+    def _format_plurals(self, phrase: str, locale: str, count: int, **kwargs) -> str:
         options = [option.strip() for option in phrase.split(self.separator)]
 
         # TODO: Add locales plural rules
 
         index = count if count < 3 else 2
 
-        return options[index].format(count=count)
+        return options[index].format(count=count, **kwargs)
