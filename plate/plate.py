@@ -154,6 +154,9 @@ class Plate:
             for k, v in locale_data.items():
                 with_emoji = v
 
+                if with_emoji is None:
+                    continue
+
                 for text in re.findall(r":(\w+):", with_emoji):
                     if text.islower():
                         logging.warning(
