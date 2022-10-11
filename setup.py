@@ -27,7 +27,7 @@ with open("README.md", encoding="utf-8") as f:
 
 setup(
     name="Plate",
-    version="1.0.0",
+    version="1.0.1",
     description="Internationalization Library for Python",
     long_description=readme,
     long_description_content_type="text/markdown",
@@ -41,10 +41,10 @@ setup(
         "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3 :: Only",
         "Programming Language :: Python :: Implementation",
         "Programming Language :: Python :: Implementation :: CPython",
@@ -58,7 +58,7 @@ setup(
         "Tracker": "https://github.com/delivrance/plate/issues",
         "Source": "https://github.com/delivrance/plate",
     },
-    python_requires="~=3.5",
+    python_requires="~=3.7",
     packages=["plate"],
     zip_safe=False,
 )
